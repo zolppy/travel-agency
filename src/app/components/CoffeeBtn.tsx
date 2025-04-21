@@ -1,9 +1,10 @@
 import { HTMLAttributes } from "react";
 import { FaCoffee } from "react-icons/fa";
 
-interface CoffeeBtn extends HTMLAttributes<HTMLButtonElement> {}
-
-export const CoffeeBtn = ({ className, ...props }: CoffeeBtn) => {
+export const CoffeeBtn = ({
+    className,
+    ...props
+}: HTMLAttributes<HTMLButtonElement>) => {
     return (
         <button
             {...props}

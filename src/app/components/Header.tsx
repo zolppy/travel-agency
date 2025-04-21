@@ -1,9 +1,10 @@
 import { HTMLAttributes } from "react";
 import { FaMapMarkerAlt, FaSearch } from "react-icons/fa";
 
-interface IHeader extends HTMLAttributes<HTMLElement> {}
-
-export const Header = ({ className = "", ...props }: IHeader) => {
+export const Header = ({
+    className = "",
+    ...props
+}: HTMLAttributes<HTMLElement>) => {
     return (
         <header
             {...props}

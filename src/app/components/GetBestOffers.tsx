@@ -1,9 +1,10 @@
 import { HTMLAttributes } from "react";
 import { H2 } from "@/app/components/H2";
 
-interface IGetBestOffers extends HTMLAttributes<HTMLDivElement> {}
-
-export const GetBestOffers = ({ className, ...props }: IGetBestOffers) => {
+export const GetBestOffers = ({
+    className,
+    ...props
+}: HTMLAttributes<HTMLDivElement>) => {
     return (
         <div
             {...props}

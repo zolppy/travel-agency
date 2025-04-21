@@ -8,9 +8,10 @@ import {
     FaLinkedin,
 } from "react-icons/fa";
 
-interface IFooter extends HTMLAttributes<HTMLElement> {}
-
-export const Footer = ({ className, ...props }: IFooter) => {
+export const Footer = ({
+    className,
+    ...props
+}: HTMLAttributes<HTMLElement>) => {
     return (
         <footer
             {...props}
