@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { raleway } from "@/utils/fonts";
 import "@/app/globals.css";
 
@@ -24,6 +25,7 @@ const RootLayout = ({
             <body className={`${raleway.className} antialiased`}>
                 {children}
             </body>
+            <GoogleAnalytics gaId="G-HF1MVGVCL7" />
         </html>
     );
 };
