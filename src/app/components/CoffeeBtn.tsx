@@ -8,7 +8,7 @@ export const CoffeeBtn = ({
     ...props
 }: HTMLAttributes<HTMLButtonElement>) => {
     const baseStyles =
-        "p-4 rounded-full bg-[#f44336] text-white text-2xl active:bg-black active:text-white lg:hover:cursor-pointer lg:hover:bg-black lg:hover:text-white fixed bottom-[10px] right-[10px]";
+        "p-4 rounded-full bg-[#f44336] text-white text-2xl active:bg-black active:text-white lg:hover:cursor-pointer lg:hover:bg-black lg:hover:text-white fixed bottom-[10px] right-[10px] transition-colors duration-200";
 
     return (
         <button {...props}>
