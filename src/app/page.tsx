@@ -5,11 +5,12 @@ import { H2 } from "@/app/components/H2";
 import { Section } from "@/app/components/Section";
 import { Place } from "@/app/components/Place";
 import { GetBestOffers } from "@/app/components/GetBestOffers";
-import { Footer } from "@/app/components/Footer";
+import { Footer } from "@/app/components/footer/Footer";
+import { CoffeeBtn } from "@/app/components/CoffeeBtn";
+import { Button } from "@/app/components/Button";
 import { naturePlaces } from "@/utils/mocks/places";
 import { goodOffers, londonImg } from "@/utils/mocks/images";
 import { Place as PlaceType } from "@/utils/types/place";
-import { CoffeeBtn } from "./components/CoffeeBtn";
 
 const Home = () => {
     return (
@@ -43,12 +44,9 @@ const Home = () => {
                                 />
                             </div>
                         </div>
-                        <button
-                            type="submit"
-                            className="bg-[#616161] text-white py-2 px-4 active:bg-[#ccc] active:text-black lg:hover:cursor-pointer lg:hover:bg-[#ccc] lg:hover:text-black md:w-fit"
-                        >
+                        <Button type="submit" className="bg-[#616161]">
                             Search and find dates
-                        </button>
+                        </Button>
                     </form>
                 </div>
             </Section>
@@ -154,12 +152,9 @@ const Home = () => {
                             required
                             className="bg-white px-2 py-4 border border-[#ccc]"
                         ></textarea>
-                        <button
-                            type="submit"
-                            className="uppercase text-white bg-black py-3 px-6 md:w-fit active:bg-[#ccc] active:text-black lg:hover:cursor-pointer lg:hover:bg-[#ccc] lg:hover:text-black"
-                        >
+                        <Button type="submit" className="uppercase">
                             Send message
-                        </button>
+                        </Button>
                     </form>
                 </Section>
                 <CoffeeBtn />

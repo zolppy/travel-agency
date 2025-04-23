@@ -1,33 +1,36 @@
 import { HTMLAttributes } from "react";
 import { H2 } from "@/app/components/H2";
+import { twMerge } from "tailwind-merge";
+import { ClassValue, clsx } from "clsx";
+import { Button } from "@/app/components/Button";
 
 export const GetBestOffers = ({
-    className,
+    className = "",
     ...props
 }: HTMLAttributes<HTMLDivElement>) => {
+    const baseStyles =
+        "text-white bg-black p-4 gap-y-4 flex flex-col opacity-60 focus-within:opacity-100 lg:hover:opacity-100";
+
     return (
         <div
             {...props}
-            className={`${className} text-white bg-black p-4 gap-y-4 flex flex-col opacity-60 focus-within:opacity-100 lg:hover:opacity-100`}
+            className={twMerge(clsx(baseStyles, className as ClassValue))}
         >
             <H2>Get the best offers first!</H2>
             <p>Join our newsletter.</p>
-            <form className="flex flex-col gap-y-4">
-                <div className="flex flex-col gap-y-1">
-                    <label htmlFor="">E-mail</label>
+            <form className={twMerge(clsx("flex flex-col gap-y-4"))}>
+                <div className={twMerge(clsx("flex flex-col gap-y-1"))}>
+                    <label htmlFor="email">E-mail</label>
                     <input
                         type="email"
-                        id=""
+                        id="email"
                         placeholder="Your e-mail address"
-                        className="bg-white p-2 text-black"
+                        className={twMerge(clsx("bg-white p-2 text-black"))}
                     />
                 </div>
-                <button
-                    type="submit"
-                    className="bg-[#f44336] py-3 px-6 md:w-fit"
-                >
+                <Button type="submit" className={twMerge(clsx("bg-[#f44336]"))}>
                     Subscribe
-                </button>
+                </Button>
             </form>
         </div>
     );
