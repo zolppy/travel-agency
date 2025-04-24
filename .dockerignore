@@ -1,0 +1,47 @@
+# Build and cache directories
+.next
+node_modules
+.pnpm-debug.log
+.npmrc
+.yarn*
+.yarn-cache/
+.pnp.cjs
+.pnp.loader.mjs
+
+# Local environment files (sensitive)
+.env
+.env.local
+.env.*.local
+
+# Code editor-specific configurations
+.vscode/
+.idea/
+*.code-workspace
+
+# Logs and temporary files
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Operating system settings
+.DS_Store
+Thumbs.db
+
+# System-generated files
+*.swp
+*.swo
+*.tmp
+*.bak
+*.pid
+
+# Other specific folders/files
+coverage/
+dist/
+build/
+*.out
+
+# Ignore local images and data if present
+public/uploads/
