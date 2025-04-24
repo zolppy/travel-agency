@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { OrderMenuOptionProvider } from "@/context/OrderMenuOption";
 import { raleway } from "@/utils/fonts";
 import "@/app/globals.css";
 
@@ -22,9 +23,11 @@ const RootLayout = ({
 }>) => {
     return (
         <html lang="en">
-            <body className={`${raleway.className} antialiased`}>
-                {children}
-            </body>
+            <OrderMenuOptionProvider>
+                <body className={`${raleway.className} antialiased`}>
+                    {children}
+                </body>
+            </OrderMenuOptionProvider>
             <GoogleAnalytics gaId="G-HF1MVGVCL7" />
         </html>
     );

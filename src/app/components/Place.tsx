@@ -2,8 +2,9 @@ import { HTMLAttributes } from "react";
 import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 import { ClassValue, clsx } from "clsx";
-import type { Place as PlaceType } from "@/utils/types/place";
 import { Button } from "@/app/components/Button";
+import type { Place as PlaceType } from "@/utils/types/place";
+import { formatMoney } from "@/utils/functions/formatters";
 
 interface IPlace extends HTMLAttributes<HTMLLIElement>, Omit<PlaceType, "id"> {}
 
@@ -31,7 +32,7 @@ export const Place = ({
             <div className={twMerge(clsx("flex flex-col gap-y-3 p-4"))}>
                 <h3 className={twMerge(clsx("text-2xl"))}>{placeTitle}</h3>
                 <p className={twMerge(clsx("opacity-60 text-[15px]"))}>
-                    {price.description} {price.value}
+                    {price.description} {formatMoney(price.value)}
                 </p>
                 <p>{description}</p>
                 <Button

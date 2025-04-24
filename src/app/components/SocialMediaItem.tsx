@@ -13,7 +13,8 @@ export const SocialMediaItem = ({
     className = "",
     ...props
 }: ISocialMediaItem) => {
-    const baseStyles = "text-2xl";
+    const baseStyles =
+        "text-2xl active:text-black lg:hover:text-black lg:hover:cursor-pointer transition-colors duration-200";
 
     return (
         <li

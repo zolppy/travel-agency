@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
 import { ClassValue, clsx } from "clsx";
-import { SocialMediaItem } from "@/app/components/footer/SocialMediaItem";
+import { SocialMediaItem } from "@/app/components/SocialMediaItem";
 
 export const Footer = ({
     className = "",
@@ -49,7 +49,11 @@ export const Footer = ({
                 <a
                     href="https://github.com/zolppy"
                     target="_blank"
-                    className={twMerge(clsx("underline"))}
+                    className={twMerge(
+                        clsx(
+                            "underline active:text-black lg:hover:text-black transition-colors duration-200"
+                        )
+                    )}
                 >
                     Zolppy
                 </a>
