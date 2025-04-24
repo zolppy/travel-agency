@@ -13,7 +13,8 @@ export const OrderMenu = ({
     ...props
 }: HTMLAttributes<HTMLUListElement>) => {
     const baseStyles = "bg-black text-white flex";
-    const { changeOrderMenuOption } = useOrderMenuOption();
+    const { changeOrderMenuOption, selectedOrderMenuOption } =
+        useOrderMenuOption();
 
     return (
         <ul
@@ -22,19 +23,37 @@ export const OrderMenu = ({
         >
             <Button
                 onClick={() => changeOrderMenuOption(OrderMenuOption.Flight)}
-                className="bg-[#f44336] flex items-center gap-x-4 py-2 px-4 md:w-none"
+                className={twMerge(
+                    clsx(
+                        "flex items-center gap-x-4 py-2 px-4 md:w-none",
+                        selectedOrderMenuOption === OrderMenuOption.Flight &&
+                            "bg-[#f44336]"
+                    )
+                )}
             >
                 <FaPlane /> Flight
             </Button>
             <Button
                 onClick={() => changeOrderMenuOption(OrderMenuOption.Hotel)}
-                className="flex items-center gap-x-4 py-2 px-4 md:w-none"
+                className={twMerge(
+                    clsx(
+                        "flex items-center gap-x-4 py-2 px-4 md:w-none",
+                        selectedOrderMenuOption === OrderMenuOption.Hotel &&
+                            "bg-[#f44336]"
+                    )
+                )}
             >
                 <FaBed /> Hotel
             </Button>
             <Button
                 onClick={() => changeOrderMenuOption(OrderMenuOption.Rental)}
-                className="flex items-center gap-x-4 py-2 px-4 md:w-none"
+                className={twMerge(
+                    clsx(
+                        "flex items-center gap-x-4 py-2 px-4 md:w-none",
+                        selectedOrderMenuOption === OrderMenuOption.Rental &&
+                            "bg-[#f44336]"
+                    )
+                )}
             >
                 <FaCar /> Rental
             </Button>
