@@ -5,24 +5,22 @@ import { GoodOffers } from "@/app/components/sections/GoodOffers";
 import { Places } from "@/app/components/sections/Places";
 import { GetBestOffers } from "@/app/components/sections/GetBestOffers";
 import { Contact } from "@/app/components/sections/Contact";
-import { CoffeeBtn } from "@/app/components/CoffeeBtn";
 import { Footer } from "@/app/components/Footer";
 
 const Home = () => {
-    return (
-        <>
-            <Header />
-            <Order />
-            <Main>
-                <GoodOffers />
-                <Places />
-                <GetBestOffers />
-                <Contact />
-                <CoffeeBtn />
-            </Main>
-            <Footer />
-        </>
-    );
+  return (
+    <>
+      <Header />
+      <Order />
+      <Main>
+        <GoodOffers />
+        <Places />
+        <GetBestOffers />
+        <Contact />
+      </Main>
+      <Footer />
+    </>
+  );
 };
 
 Home.displayName = "Home";

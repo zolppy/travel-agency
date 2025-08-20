@@ -16,21 +16,21 @@ Your premier travel agency for amazing vacation deals. Book flights, hotels, and
 
 ## Features
 
--   Responsive design;
--   Consistent design
--   Order formularies;
--   Buy me a coffee button;
--   Good offers section;
--   Explore nature section;
--   Contact section.
+- Responsive design;
+- Consistent design
+- Order formularies;
+- Buy me a coffee button;
+- Good offers section;
+- Explore nature section;
+- Contact section.
 
 ## Technologies
 
--   React.js;
--   Next.js;
--   Tailwind CSS;
--   TypeScript;
--   Docker.
+- React.js;
+- Next.js;
+- Tailwind CSS;
+- TypeScript;
+- Docker.
 
 ## Demo
 

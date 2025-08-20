@@ -3,24 +3,24 @@ import { twMerge } from "tailwind-merge";
 import { ClassValue, clsx } from "clsx";
 
 interface IOrderContainer extends HTMLAttributes<HTMLDivElement> {
-    children: ReactNode;
+  children: ReactNode;
 }
 
 export const OrderContainer = ({
-    children,
-    className = "",
-    ...props
+  children,
+  className = "",
+  ...props
 }: IOrderContainer) => {
-    const baseStyles = "p-4 flex flex-col gap-y-5";
+  const baseStyles = "p-4 flex flex-col gap-y-5";
 
-    return (
-        <div
-            {...props}
-            className={twMerge(clsx(baseStyles, className as ClassValue))}
-        >
-            {children}
-        </div>
-    );
+  return (
+    <div
+      {...props}
+      className={twMerge(clsx(baseStyles, className as ClassValue))}
+    >
+      {children}
+    </div>
+  );
 };
 
 OrderContainer.displayName = "OrderContainer";
